@@ -1,4 +1,13 @@
 #########################################SATNA SOLAR PANEL ANALYSIS######################################################################
+##########################################LANGUAGE: R, SOFTWARE: R Studio###############################################################
+install.packages("tidyverse")
+install.packages("nasapower")
+install.packages("fixest")
+install.packages("Metrics")
+library(tidyverse)
+library(nasapower)
+library(fixest)
+library(Metrics)
 
 NEWSATNASOLAR=read.csv("C:\\Users\\hp\\Documents\\empty_solar_panel.csv")
 NEWSATNASOLAR=NEWSATNASOLAR%>%filter(!HouseholdID %in% c("HH_97","HH_98","HH_99"))%>%drop_na(Import,Export,Solar_Capacity_kw)
